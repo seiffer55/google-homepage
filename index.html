@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="EN">
     <head>
         <style>
@@ -7,30 +6,111 @@
         }
         body{
             background-color: rgb(255, 255, 255);
+			font-size: 14px;
+			font-family: Arial, Helvetica, sans-serif;
         }
         .logo {
 	        margin: auto;
             display: block;
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+			object-position: center;
+			width: auto;
+			min-height: 150px;
+			max-height: 290px;
+			padding-top: 100px;
+			height: calc(100% - 560px);
         }
-        hover:class="undertext"{
-            display: block;
-            text-decoration:underline;
-            text-decoration-color: rgb(34, 34, 34);
-            text-decoration-line: none;
-            text-decoration-style: solid;
-            text-decoration-thickness: auto;
+        .header1{
+			display: inline-block;
+			padding-left:5px;
+			padding-right: 5px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			line-height: 24px;
         }
+		a:hover, a:active{
+		text-decoration: underline;
+		}
+		a {
+			color: #000000;
+			text-decoration: none;
+		}
+		.topdiv{
+			float:left;
+			flex-direction: column;
+			align-items: flex-start; 
+			padding: 5px;
+			box-sizing: border-box;
+		}
+		.topdivr{
+			float: right;
+			padding-left: 32px;
+			align-items: center;
+		}
+		.srch{
+			display: block;
+			margin: 0 auto;
+			background-color: #f8f9fa;
+			border: 1px solid #f8f9fa;
+			border-radius: 4px;
+			color: #3c4043;
+			font-family: arial,sans-serif;
+			font-size: 14px;
+			padding: 0 16px;
+			line-height: 27px;
+			height: 36px;
+			min-width: 54px;
+			text-align: center;
+			cursor: pointer;
+			user-select: none;
+			width: 50%;
+}
+			}
+		input[type="submit"]{
+			background-color: #f8f9fa;
+border: 1px solid #f8f9fa;
+border-radius: 4px;
+color: #3c4043;
+font-family: arial,sans-serif;
+font-size: 14px;
+margin: 11px 4px;
+padding: 0 16px;
+line-height: 27px;
+height: 36px;
+min-width: 54px;
+text-align: center;
+cursor: pointer;
+user-select: none;
+		}
         </style>
         <body>
-            <div>
-                <a class="undertext" 
+        <div>
+			<div>
+                <a class="topdiv" class="body" 
                 href="https://about.google/?fg=1&amp;utm_source=google-US&amp;utm_medium=referral&amp;utm_campaign=hp-header">About</a>
+				<a class="topdiv" class="body" href="https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
             </div>
-            <br>
-            <div>
+			<div>
+				<a class="topdivr" class="body" href="https://www.google.com/imghp?hl=en&authuser=0&ogbl">Images</a>
+				<a class="topdivr" class="body" href="https://mail.google.com/mail/?authuser=0&ogbl">Gmail</a>
+            </div>
+			<div>
             <img class = "logo"
                 src = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></img>
             </div>  
+			<div>
+				<input aria-label="Search"title="Search" class="srch" maxlength="2048" name="q" type="text" aria-autocomplete="both" aria-haspopup="false" autocapitalize="none" autocomplete="off" autocorrect="off" autofocus="" role="combobox" spellcheck="false" title="Search" value="" aria-label="Search" data-ved="0ahUKEwisuIWEiJDyAhUjL30KHdszBNIQ39UDCAc">
+			</div>
+			<br>
+			<div>
+				<center>
+				<input class="button" type="submit" id="search" value="Google Search">
+				<input class="button" type="submit" id="lucky" value="I'm feeling Lucky">
+				</center>
+			</div>
+		</div>
     </body>
     </head>
-</html>
+</html> 
